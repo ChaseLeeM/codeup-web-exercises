@@ -42,3 +42,58 @@
 // }
 // console.log(sayHello(name));
 
+//***RANDOM NUMBER FUNCTION***
+// let random = Math.floor((Math.random() * 1000) + 1);
+
+//IF/ELSE statements
+// let condition = true;
+// let city = prompt("Where are you?")
+
+// if (condition){
+// if (city == "San Antonio") {
+//     console.log(`Go Spurs Go`);
+// } else if (city == "Boston"){
+//     console.log(`Red Sox, really?`);
+// } else if (city == city) {
+//     console.log(`${city}, huh?`);
+//     console.log(`Find a better city.`);
+// } else {
+//     console.log("Never heard of that place.")
+// }
+
+// let random = Math.floor((Math.random() * 1000) + 1);
+// console.log(addNumbers(random));
+// function addNumbers(num1) {
+//     console.log(random)
+//     if (typeof num1 == "string") {
+//         num1 = parseInt(num1);
+//     }
+//     else {
+//         return num1 + 2;
+//     }
+// }
+
+// let pizzaPreference = prompt("What is your favorite kind of pizza?");
+// if (pizzaPreference.toLowerCase() == "cheese") {
+//     console.log("Thanks, Kevin.");
+// } else if (pizzaPreference.toLowerCase() == "Pineapple") {
+//     console.log("Rebel.");
+// } else {
+//     console.log("My aunt's a vegan too.")
+// }
+
+//TERNARY OPERATOR (SHORTHAND IF/ELSE)
+//Meant to be very simple without nested statements in the shorthand.**
+
+// var message;
+//
+// if (success) {
+//     message = "Operation was successful.";
+// } else {
+//     message = "Oops, something went wrong.";
+// }
+//
+// the above if/else can be re-written as:
+// var message = (success) ? "Operation was successful." : "Oops, something went wrong.";
+
+let success = true
