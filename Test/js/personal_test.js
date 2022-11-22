@@ -95,5 +95,37 @@
 //
 // the above if/else can be re-written as:
 // var message = (success) ? "Operation was successful." : "Oops, something went wrong.";
+// console.log(message);
 
-let success = true
+//SWITCHES
+//Cases have to be specific. Cannot run comparisons within statements.
+// let pizzaPreference = prompt("What is your favorite pizza topping?")
+// switch(pizzaPreference.toLowerCase()){
+//     case "cheese":
+//         console.log("Ok, Kevin.");
+//         break;
+//         **Without "break" it will fall through and continue to the next case.**
+    // case "pineapple":
+    //     console.log("Rebel.");
+    //     break;
+    // default:
+    //     console.log("Yeah, I guess that's alright.");
+    //     break;
+// }
+//**Removing breaks to allow value to fall through.
+let random = Math.floor((Math.random() * 10) + 1);
+switch (random){
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+        console.log(`The number is ${random} and came before 5.`);
+        break;
+    case 5:
+    case 6:
+    case 7:
+        console.log(`The number is ${random} and came between 5 and 7.`);
+        break;
+    default:
+        console.log(`The number is ${random} and came after 7.`)
+}
