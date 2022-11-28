@@ -21,19 +21,21 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-let colorChoice = prompt("What is your favorite color?");
+// let colorChoice = prompt("What is your favorite color?");
+//
+// function analyzeColor(colorChoice){
+//     if (colorChoice.toLowerCase() == "blue"){
+//         console.log("The sky is blue.");
+//     } else if (colorChoice.toLowerCase() == "red"){
+//         console.log("My shirt is red.");
+//     } else if (colorChoice.toLowerCase() == "brown"){
+//         console.log("My shoes are black.");
+//     } else if (colorChoice.toLowerCase() == "green"){
+//         console.log(`The color of grass.`);
+//     } else {
+//         console.log(`I'm colorblind, so I dont know ${colorChoice}.`);
+// }
 
-if (colorChoice.toLowerCase() == "blue"){
-    console.log("The sky is blue.");
-} else if (colorChoice.toLowerCase() == "red"){
-console.log("My shirt is red.");
-} else if (colorChoice.toLowerCase() == "brown"){
-    console.log("My shoes are black.");
-} else if (colorChoice.toLowerCase() == "green"){
-    console.log(`The color of grass.`);
-} else {
-    console.log(`I'm colorblind, so I dont know ${colorChoice}.`);
-}
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -47,11 +49,39 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+// function analyzeColor(randomColor){
+//     if (randomColor.toLowerCase() == "blue"){
+//         console.log("The sky is blue.");
+//     } else if (randomColor.toLowerCase() == "red"){
+//         console.log("My shirt is red.");
+//     } else if (randomColor.toLowerCase() == "brown"){
+//         console.log("My shoes are brown.");
+//     } else if (randomColor.toLowerCase() == "green"){
+//         console.log(`The color of grass.`);
+//     } else {
+//         console.log(`I'm colorblind, so I dont know ${randomColor}.`);
+//     }
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+function analyzeColor(){
+    switch (colorPrompt.toLowerCase()) {
+        case "red":
+            console.log("My favorite shirt is red.");
+            break;
+        case "blue":
+            console.log("The sky is blue.");
+            break;
+        case "green":
+            console.log("The grass is green.");
+            break;
+        default:
+            console.log(`I don't know ${colorPrompt}.`);
+            break;
+    }
+}
+
 
 /**
  * TODO:
@@ -59,6 +89,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+let colorPrompt = prompt ("What is your favorite color?")
 
 /* ########################################################################## */
 
