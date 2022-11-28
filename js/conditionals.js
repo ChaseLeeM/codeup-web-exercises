@@ -35,7 +35,7 @@
 //     } else {
 //         console.log(`I'm colorblind, so I dont know ${colorChoice}.`);
 // }
-
+//analyzeColor(colorChoice)
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -65,7 +65,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-function analyzeColor(){
+function analyzeColor(colorPrompt) {
     switch (colorPrompt.toLowerCase()) {
         case "red":
             console.log("My favorite shirt is red.");
@@ -90,7 +90,8 @@ function analyzeColor(){
  * function to show it to the user.
  */
 
-let colorPrompt = prompt ("What is your favorite color?")
+let colorPrompt = prompt("What is your favorite color?")
+analyzeColor(colorPrompt)
 
 /* ########################################################################## */
 
@@ -113,6 +114,51 @@ let colorPrompt = prompt ("What is your favorite color?")
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+let randomDiscount = Math.floor((Math.random() * 5) + 0);
+let randomTotal = Math.floor((Math.random() * 1000) + 1);
+
+function calculateTotal(){
+    if (luckyNumber == 0) {
+        console.log(`Before discount, your total is $${randomTotal}.`);
+        console.log(`Your discount is 0%.`);
+        console.log(`Your new total is $${randomTotal}.`);
+    }
+    else if (luckyNumber == 1) {
+        console.log(`Before discount, your total is $${randomTotal}.`);
+        console.log(`Your discount is 10%.`);
+        let discountPercentage = randomTotal * .1;
+        let discountTotal = randomTotal - discountPercentage;
+        console.log(`Your new total is $${discountTotal.toFixed(2)}.`);
+    }
+    else if (luckyNumber== 2) {
+        console.log(`Before discount, your total is $${randomTotal}.`);
+        console.log(`Your discount is 25%.`);
+        let discountPercentage = randomTotal * .25;
+        let discountTotal = randomTotal - discountPercentage;
+        console.log(`Your new total is $${discountTotal.toFixed(2)}.`);
+    }
+    else if (luckyNumber == 3) {
+        console.log(`Before discount, your total is ${randomTotal}.`);
+        console.log(`Your discount is 35%.`);
+        let discountPercentage = randomTotal * .35;
+        let discountTotal = randomTotal - discountPercentage;
+        console.log(`Your new total is ${discountTotal.toFixed(2)}.`);
+    }
+    else if (luckyNumber == 4) {
+        console.log(`Before discount, your total is $${randomTotal}.`);
+        console.log(`Your discount is 50%.`);
+        let discountPercentage = randomTotal * .5;
+        let discountTotal = randomTotal - discountPercentage;
+        console.log(`Your new total is $${discountTotal.toFixed(2)}.`);
+    }
+    else if (luckyNumber == 5) {
+        console.log(`Before discount, your total is $${randomTotal}.`);
+        console.log(`Your discount is 100%`);
+        console.log(`You get it all for free!`);
+    }
+}
+calculateTotal(randomDiscount,randomTotal);
+
 
 /**
  * TODO:
@@ -123,7 +169,8 @@ let colorPrompt = prompt ("What is your favorite color?")
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+calculateTotal(luckyNumber,randomTotal);
 
 /**
  * TODO:
@@ -143,3 +190,39 @@ let colorPrompt = prompt ("What is your favorite color?")
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+//
+// let userConfirm = confirm(`Want to play a game?`);
+// function clarifiedNumber() {
+//     if (userConfirm === true) {
+//         let userNumber = prompt("Give me a number.");
+//         return userNumber;
+//     } else {
+//         alert(`Next time then.`)
+//     }
+// }
+function evenOddSwitch(){
+    let userConfirm = confirm(`Want to play a game?`);
+    if (userConfirm === true) {
+        let userNumber = prompt("Give me a number.");
+        let numberPlus = parseInt(userNumber) + 100;
+        alert(`Your number is ${userNumber}.`);
+        alert(`${userNumber} plus 100 is ${numberPlus}.`);
+        switch (numberPlus){
+            case numberPlus % 2 === 0:
+                alert(`${numberPlus} is even.`);
+            case numberPlus % 2 === 1:
+                alert(`${numberPlus} is odd.`);
+            case numberPlus >= 0:
+                alert(`This number is positive.`);
+            case numberPlus <= 0:
+                alert(`This number is negative.`);
+            default:
+                alert:(`This is not a number.`);
+                break;
+        }
+    } else
+        alert(`Another time then.`);
+}
+evenOddSwitch();
