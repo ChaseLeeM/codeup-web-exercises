@@ -234,7 +234,7 @@ The price after the discount is $${userResult2.toFixed(2)}.`);
 
 
 
-// let userConfirm = confirm(`Want to play a game?`);
+let userConfirm = confirm(`Want to play a game?`);
 let userNumber;
 // function clarifiedNumber() {
 //     if (userConfirm) {
@@ -245,14 +245,20 @@ let userNumber;
 //     }
 // }
 function isEven(num){
-    if userNumber % 2 === 0;
-} else {
+    if (userNumber % 2 === 0);
+}
+else {
     alert(`This number is odd.`);
 }
 
 function isPositive(num){
-    if (userNumber > 0){
-        alert(`This number is positive.`)
+    if (userNumber > 0) {
+        alert(`This number is positive.`);
+}
+    else {
+    alert(`This number is negative.`)
+    }
+}
 
 function add100(num){
     return parseInt(userNumber) + 100
