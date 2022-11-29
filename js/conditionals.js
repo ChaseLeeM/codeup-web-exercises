@@ -65,13 +65,10 @@ function analyzeColor(color){
     switch (userColor){
         case "red":
             return "My favorite shirt is red."
-            break;
         case "blue":
             return "The sky is blue.";
-            break;
         case "green":
             return "The grass is green.";
-            break;
         default:
             return `I don't know ${userColor}.`;
             break;
