@@ -41,7 +41,7 @@
 let totalCones = Math.floor(Math.random() * 50) + 50;
 
 // This expression will generate a random number between 1 and 5
-let conesSold = Math.floor(Math.random() * 5) + 1;
+let coneSell = Math.floor(Math.random() * 5) + 1;
 
 // The output should be similar to the following:
 //
@@ -52,12 +52,12 @@ let conesSold = Math.floor(Math.random() * 5) + 1;
 
 
 do {
-    if (conesSold <= totalCones) {
-        console.log(`${conesSold} cones sold...`);
-        totalCones -= conesSold;
+    if (coneSell <= totalCones) {
+        console.log(`${coneSell} cones sold.`);
+        totalCones -= coneSell;
     } else {
-        console.log(`Cannot sell you ${conesSold} cones, I only have ${totalCones}.`);
-        console.log(`${conesSold} cones sold.`);
+        console.log(`Cannot sell you ${coneSell} cones, I only have ${totalCones}.`);
+        console.log(`${coneSell} cones sold.`);
         totalCones -= totalCones;
     }
     if (totalCones === 0) {
