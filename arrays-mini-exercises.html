@@ -299,15 +299,48 @@ function logNums(array) {
 
 logNums(nums);
 
-let longString = ['a','b','c','d'];
+let longString = ['Do','you','know','the','muffin','man','?'];
 
 function returnLongString(array){
-  for (let i = 0; i < array.length; i++){
-    total = i.toString() += i;
-    console.log(total);
+  let concatLongString = array.toString();
+  let stringWithoutCommas = concatLongString.replace(/,/g, ' ');
+  console.log(stringWithoutCommas);
+  }
+returnLongString(longString);
+
+function returnArrSum (array){
+  let sum = array.reduce(function(a, b) { return a + b; }, 0);
+  console.log(sum);
+}
+returnArrSum(nums);
+  // 1. Create an array of 10 foods. Write using a for loop, write logic that will log only the foods that start with a vowel. Write another solution using a forEach loop.
+  // 2. Write a function, addEvenNums, that takes in an array of numbers and adds up only the even numbers in the array and returns the sum of the even numbers. Assume any array inputs will only contain valid number elements and be non-empty.
+  // 3. Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
+// ‘input num in input array’ if the second argument is an element in the first argument array
+//   otherwise, the function should return the string ‘input num NOT in input array’ (edited)
+
+let foods = [
+  'anchovies',
+  'pepperoni',
+  'cheese',
+  'pineapple',
+  'sauce',
+  'chicken',
+  'olives',
+  'mushrooms',
+  'onions',
+  'peppers'
+];
+function findVowels(array){
+  for (let i = 0; i < array; i += 1){
+    let firstChar = array[i][0];
+    let vowels = ['a','e','i','o','u'];
+    if (vowels.includes(firstChar)){
+      console.log(array[i]);
+    }
   }
 }
-returnLongString(longString);
+findVowels(foods);
 
 </script>
 

@@ -52,6 +52,7 @@ let coneSell = Math.floor(Math.random() * 5) + 1;
 
 
 do {
+    let coneSell = Math.floor(Math.random() * 5) + 1;
     if (coneSell <= totalCones) {
         console.log(`${coneSell} cones sold.`);
         totalCones -= coneSell;
