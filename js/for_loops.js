@@ -33,11 +33,11 @@ showMultiTable(2);
 // Create a for loop that uses console.log to create the output shown below.
 //
 //
-// for (let i = 0; i < 1000, i++) {
-//     let isEven = getRandNumb() % 2 === 0;
-//     let answer = `${getRandNumb()} is ${isEven ? 'even' : 'odd'}`;
-//     console.log(answer);
-// }
+for (let i = 0; i < 1000, i++) {
+    let isEven = getRandNumb() % 2 === 0;
+    let answer = `${getRandNumb()} is ${isEven ? 'even' : 'odd'}`;
+    console.log(answer);
+}
 //
 // function getRandNumb(input){
 //     return Math.floor((Math.random() * 1000) + 1)
