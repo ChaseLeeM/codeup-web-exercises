@@ -162,8 +162,18 @@ books.forEach(function (info){
      *   `showBookInfo` function.
      */
 
-function createBook(book){
-
-    }
+function createBook(newTitle,newFirstName,newLastName){
+    let newBook = [
+            {
+                title: newTitle,
+                author: {
+                    firstName: newFirstName,
+                    lastName: newLastName,
+                }
+            }
+        ];
+        books.push(newBook);
+}
+createBook()
 
 })();
