@@ -1,3 +1,4 @@
+console.log(`for_loops`);
 // Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 //
 // For example, showMultiplicationTable(7) should output
@@ -33,11 +34,11 @@ showMultiTable(2);
 // Create a for loop that uses console.log to create the output shown below.
 //
 //
-for (let i = 0; i < 1000, i++) {
-    let isEven = getRandNumb() % 2 === 0;
-    let answer = `${getRandNumb()} is ${isEven ? 'even' : 'odd'}`;
-    console.log(answer);
-}
+// for (let i = 0; i < 1000, i++) {
+//     let isEven = getRandNumb() % 2 === 0;
+//     let answer = `${getRandNumb()} is ${isEven ? 'even' : 'odd'}`;
+//     console.log(answer);
+// }
 //
 // function getRandNumb(input){
 //     return Math.floor((Math.random() * 1000) + 1)

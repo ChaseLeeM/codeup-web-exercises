@@ -145,16 +145,11 @@ const books = [
      *      ...
      */
 books.forEach(function (info){
-    console.log(`Book #${[]}`);
+    console.log(`Book #${books.indexOf(info) + 1}`);
     console.log(`Title: ${info.title}`);
     console.log(`Author: ${info.author.firstName} ${info.author.lastName}`);
 });  //not quite there
 
-// for (let i = 0; i < books.length; i +=1){
-//     console.log(books[i]);
-//     console.log(`Title: ${books.title}`);
-    // console.log(`Author: ${books.author.firstName} ${books.author.lastName}`);
-// } //not quite there
 
     /**
      * Bonus:
@@ -167,6 +162,8 @@ books.forEach(function (info){
      *   `showBookInfo` function.
      */
 
+function createBook(book){
 
+    }
 
 })();
