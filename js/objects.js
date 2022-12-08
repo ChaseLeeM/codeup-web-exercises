@@ -13,12 +13,11 @@
      */
 
 
-const person =
-    {
-        firstName: 'Rick',
-        lastName: 'Sanchez',
+let person = {
+        firstName: 'Chase',
+        lastName: 'Medford',
         sayHello: function (){
-            console.log('Hello from Rick Sanchez.')
+            console.log(`Hello, from ${this.firstName} ${this.lastName}.`);
         }
     }
 
@@ -26,7 +25,8 @@ console.log(person.firstName);
 console.log(person.lastName);
 person.sayHello();
 
-
+person.middleName = 'Lee';
+    console.log(person);
 
     /**
      * TODO:
@@ -58,15 +58,20 @@ var shoppers = [
     {name: 'George', amount: 320}
 ];
 
+// function easyDollars(input){
+//
+// }
+
 shoppers.forEach(function (spender){
     if (spender.amount > 200){
-       let discount = spender.amount * .12;
-       let newTotal = spender.amount - discount;
-        console.log(`${spender.name} spent $${spender.amount.toFixed(2)}, earning them a 12% discount! You saved $${discount.toFixed(2)}. Your new total is $${newTotal.toFixed(2)}.`);
+       let discount = (spender.amount * .12);
+       let total = (spender.amount - discount);
+        console.log(`${spender.name} owes ${spender.amount.toLocaleString('en-US',{style: 'currency', currency: 'USD'})}, earning them a 12% discount! You saved ${discount.toLocaleString('en-US',{style: 'currency', currency: 'USD'})}. Your new total is ${total.toLocaleString('en-US',{style: 'currency', currency: 'USD'})}.`);
     } else {
-        console.log(`Sorry, no discount for ${spender.name}`);
+        console.log(`Sorry, ${spender.name}, no discount for you. Your total is ${spender.amount.toLocaleString('en-US',{style: 'currency', currency: 'USD'})}.`);
     }
-})
+});
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -90,10 +95,10 @@ const books = [
              }
         },
         {
-            title: "The Hobbit",
+            title: "Pillars of the Earth",
             author: {
-                firstName: 'John',
-                lastName: 'Tolkien',
+                firstName: 'Ken',
+                lastName: 'Follet',
             }
         },
         {
@@ -104,7 +109,7 @@ const books = [
             }
         },
         {
-            title: "Breakfast of Champions",
+            title: "A Man Without a Country",
             author: {
                 firstName: 'Kurt',
                 lastName: 'Vonnegut',
@@ -144,12 +149,15 @@ const books = [
      *      ---
      *      ...
      */
-books.forEach(function (info){
-    console.log(`Book #${books.indexOf(info) + 1}`);
-    console.log(`Title: ${info.title}`);
-    console.log(`Author: ${info.author.firstName} ${info.author.lastName}`);
-});  //not quite there
 
+function booksList(){
+    books.forEach(function (book){
+        console.log(`Book #${books.indexOf(book) + 1}`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+})}
+
+booksList();
 
     /**
      * Bonus:
@@ -161,19 +169,28 @@ books.forEach(function (info){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-
+// let newBook;
 function createBook(newTitle,newFirstName,newLastName){
-    let newBook = [
-            {
+    let newBook = {
                 title: newTitle,
                 author: {
                     firstName: newFirstName,
                     lastName: newLastName,
                 }
             }
-        ];
         books.push(newBook);
+    return newBook;
 }
-createBook()
+createBook('House of Leaves','Mark','Danielewski');
+
+// function showBookInfo(){
+//     books.forEach(function (book){
+//         let message =
+//         console.log(`Book #${books.indexOf(book) + 1}`);
+//         console.log(`Title: ${book.title}`);
+//         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+//     })}
+
+booksList();
 
 })();
