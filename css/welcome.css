@@ -1,0 +1,19 @@
+.fancy-header{
+    color: purple;
+}
+
+<style>
+ td {
+     border-right:1px solid rgba(0, 0, 0, 0);
+     border-bottom: 1px solid #ffffff;
+     border-top: 1px solid #ffffff;
+ }
+table {
+    width: 50%;
+    border:1px solid #ffffff;
+    border-collapse: collapse;
+}
+body{
+    margin: 25x;
+}
+</style>
