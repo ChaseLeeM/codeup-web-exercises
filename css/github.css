@@ -21,7 +21,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100hv;
 }
 
 main {
@@ -109,6 +109,7 @@ main {
 .container.page-tabs-menu ul {
     display:flex;
     margin-bottom: -1px;
+    justify-content: center;
 }
 
 .container.page-tabs-menu ul li {
@@ -130,4 +131,14 @@ main {
     color: #000;
     font-weight: 600;
     background-color: #fff;
+}
+.container.contact-links {
+    color: blue;
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.container.avatars {
+    padding: 40px;
 }
