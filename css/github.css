@@ -14,21 +14,12 @@ a {
     text-decoration: none;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100hv;
 }
 
-main {
-    display:flex;
-    flex-direction:column;
-    flex-grow:1;
-}
 
 .container {
     display:flex;
