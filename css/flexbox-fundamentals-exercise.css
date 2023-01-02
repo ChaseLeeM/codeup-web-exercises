@@ -23,6 +23,7 @@ h2, h3 {
     background: green;
     height: 1em;
     width: 2em;
+    flex-direction: row;
 }
 
 .border {border: 2px solid black;}
