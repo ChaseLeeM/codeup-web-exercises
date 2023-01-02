@@ -15,21 +15,21 @@ body, html {
 }
 
 .message-info {
-    color: #292E86;
-    background: #C2DAFD;
+    color: #4C46A2;
+    background: #D0DDFC;
 }
 
 .message-success {
-    color: #1C7549;
-    background: #C6F0D6;
+    color: #5F9F73;
+    background: #D6F2DC;
 }
 
 .message-warning {
-    color: #9F893C;
-    background: #FFFAC5;
+    color: #A89D56;
+    background: #FBFCCE;
 }
 
 .message-error {
-    color: #822033;
-    background: #FDCDD2;
+    color: #954D5B;
+    background: #F4D4D7;
 }
