@@ -49,7 +49,7 @@ a {
     flex-grow:1;
 }
 
-.header .column {
+.header.column {
     justify-content:center;
 }
 
@@ -83,12 +83,12 @@ a {
     margin: 10px;
 }
 
-.container.page-header .row {
+.container.page-header.row {
     justify-content:center;
     column-gap: 10px;
 }
 
-.container.page-header .column {
+.container.page-header.column {
     justify-content:center;
 }
 
