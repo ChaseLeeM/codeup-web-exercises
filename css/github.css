@@ -76,7 +76,7 @@ a {
     background-color:#FAFBFC;
     padding: 15px;
 }
-.container.page-tabs-content.other-pic{
+.container.tabs-content.other-pic{
     height: 100px;
     width: 100px;
     border: black;
@@ -92,18 +92,18 @@ a {
     justify-content:center;
 }
 
-.container.page-tabs-menu {
+.container.tabs-menu {
     background-color:#FAFBFC;
     border-bottom: 1px solid #dadada;
 }
 
-.container.page-tabs-menu ul {
+.container.tabs-menu ul {
     display:flex;
     margin-bottom: -1px;
     justify-content: center;
 }
 
-.container.page-tabs-menu ul li {
+.container.tabs-menu ul li {
     border-top: 1px solid rgb(230 94 0 / 0%);
     border-left: 1px solid rgb(218 218 218 / 0%);
     border-right: 1px solid rgb(218 218 218 / 0%);
@@ -114,7 +114,7 @@ a {
     padding: 10px 15px;
 }
 
-.container.page-tabs-menu ul li.active {
+.container.tabs-menu ul li.active {
     border-top: 2px solid rgb(230 94 0 / 100%);
     border-left: 1px solid rgb(218 218 218 / 100%);
     border-right: 1px solid rgb(218 218 218 / 100%);
@@ -130,6 +130,6 @@ a {
 
 }
 
-.container.avatars {
+.container.other-pic {
     padding: 40px;
 }
