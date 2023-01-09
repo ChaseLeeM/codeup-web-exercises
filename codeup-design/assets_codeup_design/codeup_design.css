@@ -25,15 +25,15 @@
     align-content: center;
     flex-direction: column;
     text-align: center;
-    margin-left:10px;
+    margin-left:5px;
+    margin-right: 5px;
     color: white;
-    font-family: 'Anton', sans-serif"
 }
 .icon-small{
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    font-family: anton, sans-serif;
+    font-family: Anton, sans-serif;
     text-align: center;
     font-size: 12px;
     color: black;
@@ -65,4 +65,10 @@
 }
 .nav-title{
     margin-right: 1em;
+}
+.abel{
+    font-family: 'Abel' sans-serif;
+}
+.anton{
+    font-family: 'Anton' sans-serif;
 }
