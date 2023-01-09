@@ -11,7 +11,7 @@ body{
 .nav-items{
     list-style: none;
     margin: auto;
-    padding: 1em;
+    padding: .5em;
 }
 .nav-items a{
     text-decoration: none;
@@ -28,6 +28,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: black;
     list-style: none;
+    padding-right: 1em;
 }
 a{
     display: inline-block;
