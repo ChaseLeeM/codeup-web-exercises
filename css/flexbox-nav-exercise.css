@@ -1,0 +1,41 @@
+body{
+    background-color: whitesmoke;
+}
+.nav-list{
+    background-color: #00ABA9;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+}
+.nav-items{
+    list-style: none;
+    margin: auto;
+    padding: 1em;
+}
+.nav-items a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+    justify-content: space-between;
+}
+.logo{
+    flex: auto;
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: .2em;
+    padding-top: .2em;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    list-style: none;
+}
+a{
+    display: inline-block;
+}
+a:hover{
+    color: blue;
+    transition:all 150ms ease-in;
+}
+.user{
+    margin-right: 2em;
+}
