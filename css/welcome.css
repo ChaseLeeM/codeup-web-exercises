@@ -38,7 +38,7 @@ td{
     padding: 5px;
 }
 a:hover{
-    color: green;
+    color: gray;
 }
 a:visited {
     color: red;
