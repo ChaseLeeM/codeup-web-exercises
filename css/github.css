@@ -17,7 +17,7 @@ a {
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100hv;
+    min-height: 100vh;
 }
 
 
@@ -30,17 +30,17 @@ a {
 .container.header {
     background-color:#000000;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
 }
 
 .row {
     display:flex;
     width: 100%;
-    max-width:900px;
+    max-width:1000px;
 }
 
 .header .row {
-    column-gap: 30px;
+    column-gap: 35px;
 }
 
 .column {
@@ -60,7 +60,7 @@ a {
 
 .container.header ul {
     display:flex;
-    column-gap:15px;
+    column-gap:20px;
 }
 
 .container.header ul li {
@@ -128,8 +128,4 @@ a {
     display: flex;
     margin-top: 10px;
 
-}
-
-.container.other-pic {
-    padding: 40px;
 }
