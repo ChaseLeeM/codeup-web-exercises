@@ -1,8 +1,6 @@
 .fancy-header{
     color: purple;
 }
-
-<style>
  td {
      border-right:1px solid rgba(0, 0, 0, 0);
      border-bottom: 1px solid #ffffff;
@@ -16,4 +14,32 @@ table {
 body{
     margin: 25x;
 }
-</style>
+h1{
+    text-align: center;
+}
+.h2-color{
+    color: darkblue;
+    text-decoration: underline;
+}
+body{
+    background-color: lightgrey;
+}
+body{
+    background-image: url("/img/pexels-ovan-62693.jpg");
+    background-size: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+.table-heads{
+    font-size: 20px;
+    padding: 10px;
+}
+td{
+    font-size: 18px;
+    padding: 5px;
+}
+a:hover{
+    color: green;
+}
+a:visited {
+    color: red;
+}
