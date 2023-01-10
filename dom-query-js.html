@@ -28,43 +28,86 @@
   <button id="btn2">Step 2</button>
   <button id="btn3">Step 3</button>
   <button id="btn4">Step 4</button>
+  <button id="btn5">Done</button>
+  <button id="btn6">Reload</button>
+  <button id="btn7">Remove</button>
+
 <script>
   (function() {
     "use strict";
     // TODO: Uncomment next line and get the main header element by id
     var mainHeader = document.getElementById('main-header');
-
-    btn1.addEventListener("click", function() {
+    const change1 = () => {
       document.getElementById("main-header").innerHTML = "JavaScript is Cool!";
-    });
+    }
+    btn1.addEventListener("click", change1);
 
     var subHeader = document.getElementById('sub-header');
 
-    btn2.addEventListener("click", function() {
+    const change2 = () => {
       document.getElementById("sub-header").style.color = '#00f';
-    });
+    }
+    btn2.addEventListener("click", change2);
 
     var listItems = document.getElementsByTagName('li');
 
-    btn3.addEventListener("click", function() {
-      for (let i = 1; i < listItems.length; i +=2){
+    const change3 = () => {
+      for (let i = 1; i < listItems.length; i += 2) {
         listItems[i].style.color = "grey";
       }
-    });
+    }
 
-    btn4.addEventListener("click", function() {
+    btn3.addEventListener("click", change3);
+
+    const change4 = () => {
       for (let i = 0; i < listItems.length; i++) {
         if (listItems[i].getAttribute("data-dbid") === "1") {
           listItems[i].style.color = "blue";
         }
       }
-    });
+    }
+
+    btn4.addEventListener("click", change4);
 
     var subParagraphs = document.getElementsByClassName("sub-paragraph");
     console.log(subParagraphs)
 
+    const change5 = () => {
+      subParagraphs[0].innerHTML = "Mission Accomplished";
+    }
+    btn5.addEventListener("click", change5);
 
-    subParagraphs[0].innerHTML = "Mission Accomplished"
+    btn6.addEventListener("click", function() {
+      window.location.reload();
+    });
+
+    const removeEvents = () => {
+      btn1.removeEventListener("click",change1);
+      btn2.removeEventListener("click",change2);
+      btn3.removeEventListener("click",change3);
+      btn4.removeEventListener("click",change4);
+      btn5.removeEventListener("click",change5);
+    }
+
+    btn7.addEventListener("click", removeEvents);
+
+    // const changeParagraph = () => {
+    //   let paragraph = document.getElementsByClassName("sub-paragraph")
+    //   paragraph[0].innerHTML = "Mission Accomplished!!!!"
+    // }
+    // let btn5 = document.getElementById('btn-5')
+    // let btn7 = document.getElementById('btn-7')
+    //
+    // btn5.addEventListener('click', changeParagraph)
+    //
+    // function removeEvent () {
+    //   btn5.removeEventListener('click', changeParagraph)
+    // }
+    //
+    // btn7.addEventListener('click', removeEvent)
+
+
+
 
     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
     // mainHeader.innerHTML ='JavaScript is Cool'
