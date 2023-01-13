@@ -3,11 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>JQuery Exercises</title>
-
-    <script src="js/jquery_exercises.js"></script>
+<!--    <script src="js/jquery_exercises.js"></script>-->
 </head>
 <body>
-
+<h1 id="header" class="codeup">JQuery Exercises</h1>
+    <p id="words" class="codeup">Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.
+    </p>
+<div class="row">
+    <div class="col-6 things">
+        <ul class="container">
+            <li id="list">Fat</li>
+            <li id="list">Lady</li>
+            <li id="list">Sings</li>
+         </ul>
+    </div>
+    <div class="col-6 stuff">
+        <ul class="container">
+            <li id="list">AM/FM Radio</li>
+            <li id="list">Reclining Bucket Seats</li>
+            <li id="list">Power windows</li>
+        </ul>
+    </div>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+
+    window.onload = function() {
+        alert( 'The page has finished loading!' );
+    }
+
+    $("li").css("font-size", "20px");
+
+    alert($("h1").html());
+
+    $("h1, p, li").css("background-color", "yellow");
+
+
+
+
+</script>
 </body>
 </html>
