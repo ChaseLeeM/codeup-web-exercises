@@ -37,12 +37,14 @@
    })
    $('li').hover(
        function() {
-           $(this).css('background-color','red');
+           $(this).css({
+               backgroundColor: 'red',
+               color: 'blue'
+           });
        },
        function() {
            $(this).css('background-color', 'black');
-       }
-   );
+       });
 
 </script>
 </body>
