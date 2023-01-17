@@ -29,18 +29,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
 
-    window.onload = function() {
-        alert( 'The page has finished loading!' );
-    }
-
-    $("li").css("font-size", "20px");
-
-    alert($("h1").html());
-
-    $("h1, p, li").css("background-color", "yellow");
-
-
-
+   $("h1").click(function (){
+       $(this).css('background-color', 'green')
+   })
+   $("p").dblclick(function (){
+       $(this).css('font-size', '20px')
+   })
+   $('li').hover(
+       function() {
+           $(this).css('background-color','red');
+       },
+       function() {
+           $(this).css('background-color', 'black');
+       }
+   );
 
 </script>
 </body>
