@@ -21,7 +21,7 @@
 
 <h1>Konami Code</h1>
 
-<h2 class="hide colorSet">You better run! Hit Escape!!</h2>
+<h2 class="hide colorSet">Oh, that's ugly! Hit Escape!!</h2>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
@@ -38,7 +38,7 @@
                     $("h2").removeClass("hide");
                     flashScreen= setInterval(function() {
                     $("body").toggleClass("flash");
-                }, 300);
+                }, 100);
                 konamiCodePosition = 0;
             }
         } else {
@@ -50,7 +50,6 @@
         if(e.keyCode === 27){
             clearInterval(flashScreen);
             $("body").removeClass("flash");
-            window.open("https://www.youtube.com/watch?v=CsGYh8AacgY");
         }
     });
 
