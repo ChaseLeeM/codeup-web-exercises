@@ -14,6 +14,9 @@
             -ms-animation: fadeIn 5s;
             font-size: 1px;
         }
+        .bold{
+            font-weight: bold;
+        }
 
         .highlight{
             background: yellow;
@@ -55,13 +58,18 @@
                 opacity: 0;
             }
         }
+        .row{
+            display: flex;
+            padding: 1em;
+            justify-content: space-between;
+        }
 
 
     </style>
 </head>
 <body>
 <h2>Glacier National Park 10 FAQ's</h2>
-<button>View Answers</button>
+<button id="first-button">View Answers</button>
 <dl class="fade-in">
     <dt>Where is Glacier National Park located?</dt>
     <dd class="invisible">Glacier National Park is located in northwestern Montana on the U.S./Canadian border. Access to the park from the east and west is along U.S. Highway 2. Park headquarters is located in West Glacier.</dd>
@@ -84,23 +92,55 @@
     <dt>Can I drive my RV along the Going-to-the-Sun Road?</dt>
     <dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
 </dl>
-    <button>View Answers</button>
+<div class="row">
+<h3>Park 1</h3>
+<ul>
+    <li>Fact 1</li>
+    <li>Fact 2</li>
+    <li>Fact 3</li>
+    <li>Fact 4</li>
+</ul>
+<h3>Park 2</h3>
+<ul>
+    <li>Fact 1</li>
+    <li>Fact 2</li>
+    <li>Fact 3</li>
+    <li>Fact 4</li>
+</ul>
+<h3>Park 3</h3>
+<ul>
+    <li>Fact 1</li>
+    <li>Fact 2</li>
+    <li>Fact 3</li>
+    <li>Fact 4</li>
+</ul>
+</div>
+<button id="last-button">Highlight Last</button>
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
 
 $(document).ready(function(){
-    $("button").click(function(){
+    $("#first-button").click(function(){
         $("dd").toggleClass("invisible");
     });
 
     $("dt").click(function (){
-        $(this).addClass('highlight');
-    }, function (){
         $(this).toggleClass('highlight');
     });
+
+    $("#last-button").click(function(){
+        $("ul").each(function(){
+            $(this).children().last().toggleClass('highlight');
+        });
+    });
+
+    $('h3').click(function (){
+        $(this).next().toggleClass('bold');
+    });
 });
-
-
 
 </script>
 
