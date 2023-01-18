@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>JQuery Exercises</title>
 <!--    <script src="js/jquery_exercises.js"></script>-->
+    <style type="text/css">
+
+
+    </style>
 </head>
 <body>
 <h1 id="header" class="codeup">JQuery Exercises</h1>
@@ -12,16 +16,16 @@
 <div class="row">
     <div class="col-6 things">
         <ul class="container">
-            <li id="list">Fat</li>
-            <li id="list">Lady</li>
-            <li id="list">Sings</li>
+            <li id="list fast">Fat</li>
+            <li id="list fast">Lady</li>
+            <li id="list fast">Sings</li>
          </ul>
     </div>
     <div class="col-6 stuff">
         <ul class="container">
-            <li id="list">AM/FM Radio</li>
-            <li id="list">Reclining Bucket Seats</li>
-            <li id="list">Power windows</li>
+            <li id="list slow">AM/FM Radio</li>
+            <li id="list slow">Reclining Bucket Seats</li>
+            <li id="list slow">Power windows</li>
         </ul>
     </div>
 </div>
@@ -43,8 +47,12 @@
            });
        },
        function() {
-           $(this).css('background-color', 'black');
+           $(this).css({
+               backgroundColor: 'black',
+               color: 'white'
+           });
        });
+
 
 </script>
 </body>

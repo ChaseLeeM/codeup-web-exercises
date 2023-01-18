@@ -6,10 +6,22 @@
         .flash {
             background-color: red;
         }
-    </style>
+        .hide{
+            display: none;
+        }
+        .colorSet{
+            color: yellow;
+            font-size: 48px;
+        }
+
+
+</style>
 </head>
 <body>
+
 <h1>Konami Code</h1>
+
+<h2 class="hide colorSet">You better run! Hit Escape!!</h2>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
@@ -23,9 +35,10 @@
         if (e.keyCode === konamiCode[konamiCodePosition]) {
             konamiCodePosition++;
             if (konamiCodePosition === konamiCode.length) {
+                    $("h2").removeClass("hide");
                     flashScreen= setInterval(function() {
                     $("body").toggleClass("flash");
-                }, 100);
+                }, 300);
                 konamiCodePosition = 0;
             }
         } else {
@@ -34,13 +47,15 @@
     });
 
     $(document).keydown(function(e){
-        if(e.keyCode === 27){ // 27 is the keyCode for the Esc key
+        if(e.keyCode === 27){
             clearInterval(flashScreen);
             $("body").removeClass("flash");
+            window.open("https://www.youtube.com/watch?v=CsGYh8AacgY");
         }
     });
 
 
 </script>
+
 </body>
 </html>
