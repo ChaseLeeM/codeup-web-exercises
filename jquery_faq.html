@@ -63,6 +63,9 @@
             padding: 1em;
             justify-content: space-between;
         }
+        .blue{
+            color: blue;
+        }
 
 
     </style>
@@ -139,6 +142,10 @@ $(document).ready(function(){
 
     $('h3').click(function (){
         $(this).next().toggleClass('bold');
+    });
+
+    $('li').click(function (){
+        $(this).parent().children().first().toggleClass('blue')
     });
 });
 
