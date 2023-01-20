@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="css/resets.css">
+  <!-- Custom CSS -->
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 100%;
+      flex-grow: 1;
+    }
+    header.container {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.78);
+    }
+    main.container, main.container>.row {
+      padding: 0;
+      flex-grow: 1;
+      column-gap: 0px;
+    }
+    aside.column {
+      width: 300px;
+      flex: none;
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div class="page-wrapper">
+  <header class="container">
+    <div class="row full-width">
+      <div class="column">
+        YOUR LOGO HERE
+      </div>
+      <div class="column">
+
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row full-width">
+      <aside class="column">
+
+      </aside>
+      <div class="column">
+        <div id='map'></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Keys -->
+<script src="js/keys.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+
+<!-- Custom JS -->
+<script>
+  mapboxgl.accessToken = keys.mapbox;
+  let map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 10,
+    center: [-98.4916, 29.4252]
+  });
+  let marker = new mapboxgl.Marker()
+          .setLngLat([-98.4916, 29.4260])
+          .addTo(map);
+  let popup = new mapboxgl.Popup()
+          .setLngLat([-98.489615, 29.426827])
+          .setHTML("<p>Codeup Rocks!</p>")
+          .addTo(map)
+  let alamoPopup = new mapboxgl.Popup()
+          .setHTML("<p>Remember The Alamo!</p>")
+
+  marker.setPopup(alamoPopup)
+</script>
+</body>
+</html>
