@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Terry Blacks BBQ",
+    "location": "1003 Barton Springs Rd, Austin, TX 78704",
+    "category": "Restaurant",
+    "info": "Great BBQ. Best beef rib I've ever come across."
+  }, {
+    "name": "The Continal Club",
+    "location": "1315 S Congress Ave, Austin, TX 78704",
+    "category": "Bar",
+    "info":"Great live music. Great drinks. Great people."
+  },  {
+  "name": "Texas De Brazil",
+  "location": "98 San Jacinto Blvd, Austin, TX 78701",
+  "category": "Restaurant",
+  "info": "Great Brazilian steakhouse. Great food. Great service."
+  }, {
+}  {
+  "name": "Kebabalicious",
+  "location": "1000 E 11th St, Austin, TX 78702",
+  "category": "Restaurant",
+  "info": "Great Mediterranean food. Great service. Great prices."
+  }, {
+  "name": "The Driskill",
+    "location": "604 Brazos St, Austin, TX 78701",
+    "category": ["Hotel","Bar"]
+    "info": "Great hotel. Great drinks. Great location."
+}
+]
