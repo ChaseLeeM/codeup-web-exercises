@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     align-items:center;
     flex: 0 0 auto;
-    padding: 20px;
+    padding: 1px;
 }
 /* THE ROW ESTABLISHES MAXIMUM WIDTH ON SITE CONTENT, AND ORGANIZES ITS CHILD(REN), THE
    COLUMN, HORIZONTALLY. */
