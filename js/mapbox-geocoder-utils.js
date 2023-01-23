@@ -15,7 +15,7 @@
  */
 function geocode(search, token) {
     var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
+    var endPoint = '/geocoding/v11/mapbox.places/';
     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
         .then(function(res) {
             return res.json();
@@ -41,7 +41,7 @@ function geocode(search, token) {
  */
 function reverseGeocode(coordinates, token) {
     var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
+    var endPoint = '/geocoding/v11/mapbox.places/';
     return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
         .then(function(res) {
             return res.json();
