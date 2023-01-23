@@ -5,33 +5,26 @@
   <title>First Mapbox Map</title>
   <!-- Mapbox CSS -->
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" href="css/resets.css">
+  <link rel="stylesheet" href="../media-queries-exercise/weather_map/css/resets.css">
 
-  <script src="js/mapbox-geocoder-utils.js"></script>
+  <script src="../media-queries-exercise/weather_map/js/mapbox-geocoder-utils.js"></script>
 
 </head>
 <body>
-
-<h1>Chase's Mapbox Map!</h1>
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div class="page-wrapper">
   <header class="container">
     <div class="row full-width">
       <div class="column">
-        YOUR LOGO HERE
-      </div>
-      <div class="column">
-
+        Chase's Mapbox Map!
       </div>
     </div>
   </header>
   <main class="container">
     <div class="row full-width">
       <aside class="column">
-
         <div id="cards"></div>
-
       </aside>
       <div class="column">
         <div id='map'></div>
@@ -43,7 +36,7 @@
 <!-- Keys -->
 <script src="js/keys.js"></script>
 <!-- Mapbox GeoCoder Utils -->
-<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="../media-queries-exercise/weather_map/js/mapbox-geocoder-utils.js"></script>
 <!-- Mapbox JS -->
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 <!--- Jquery -->
@@ -51,78 +44,90 @@
 
 <!-- Custom JS -->
 <script>
+  "use strict";
 
   mapboxgl.accessToken = keys.mapbox;
   let map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/mapbox/streets-v11',
     zoom: 10,
     center: [-98.4916, 29.4252]
   });
 
-    geocode("1003 Barton Springs Rd, Austin, TX 78704", keys.mapbox).then(function(result) {
-        console.log(result);
-        map.setCenter(result);
-        map.setZoom(17);
-        let marker = new mapboxgl.Marker()
-                .setLngLat(result)
-                .addTo(map);
-        let popup = new mapboxgl.Popup()
-                .setLngLat(result)
-                .setHTML("<p>1003 Barton Springs Rd, Austin, TX 78704</p>")
-                .addTo(map);
-        marker.setPopup(popup);
-    });
+  // function geocode(search, token) {
+  //   var baseUrl = 'https://api.mapbox.com';
+  //   var endPoint = '/geocoding/v11/mapbox.places/';
+  //   return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+  //           .then(function(res) {
+  //             return res.json();
+              // to get all the data from the request, comment out the following three lines...
+            // }).then(function(data) {
+            //   return data.features[0].center;
+            // });
+  // }
+    // geocode("1003 Barton Springs Rd, Austin, TX 78704", keys.mapbox).then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(17);
+    //     let marker = new mapboxgl.Marker()
+    //             .setLngLat(result)
+    //             .addTo(map);
+    //     let popup = new mapboxgl.Popup()
+    //             .setLngLat(result)
+    //             .setHTML("<p>1003 Barton Springs Rd, Austin, TX 78704</p>")
+    //             .addTo(map);
+    //     marker.setPopup(popup);
+    // });
 
 <!-- Map Markers for JSON Objects -->
 
-    $.getJSON("data/my-maps.json", function(data) {
-        console.log(data);
-        data.forEach(function(location) {
-            geocode(location.address, keys.mapbox).then(function(result) {
-               console.log(result);
-                let marker = new mapboxgl.Marker()
-                        .setLngLat(result)
-                        .addTo(map);
-                let popup = new mapboxgl.Popup()
-                        .setLngLat(result)
-                        .setHTML("<p>" + location.address + "</p>")
-                        .addTo(map);
-                marker.setPopup(popup);
-            });
-        });
-    });
+    // $.getJSON("data/my-maps.json", function(data) {
+    //     console.log(data);
+    //     data.forEach(function(location) {
+    //         geocode(location.address, keys.mapbox).then(function(result) {
+    //            console.log(result);
+    //             let marker = new mapboxgl.Marker()
+    //                     .setLngLat(result)
+    //                     .addTo(map);
+    //             let popup = new mapboxgl.Popup()
+    //                     .setLngLat(result)
+    //                     .setHTML("<p>" + location.address + "</p>")
+    //                     .addTo(map);
+    //             marker.setPopup(popup);
+    //         });
+    //     });
+    // });
 
 
-    $.getJSON("data/my-map.json", function(data) {
-        data.forEach(function (location) {
-            let card = $("<div>").addClass("card");
-            let cardBody = $("<div>").addClass("card-body");
-            let cardTitle = $("<h5>").addClass("card-title").text(location.name);
-            let cardText = $("<p>").addClass("card-text").text(location.address);
-            cardBody.append(cardTitle, cardText);
-            card.append(cardBody);
-            $("#cards").append(card);
-            geocode(location.address, keys.mapbox).then(function(result){
-                let marker = new mapboxgl.Marker()
-                        .setLngLat(result)
-                        .addTo(map);
-                let popup = new mapboxgl.Popup()
-                        .setLngLat(result)
-                        .setHTML("<p>" + location.name + "</p>")
-                        .addTo(map);
-                marker.setPopup(popup);
-            });
-        });
-    });
-
-    $("#cards").on("click", ".card", function(){
-        let address = $(this).find(".card-text").text();
-        geocode(address, keys.mapbox).then(function(result){
-            map.setCenter(result);
-            map.setZoom(17);
-        });
-    });
+    // $.getJSON("data/my-map.json", function(data) {
+    //     data.forEach(function (location) {
+    //         let card = $("<div>").addClass("card");
+    //         let cardBody = $("<div>").addClass("card-body");
+    //         let cardTitle = $("<h5>").addClass("card-title").text(location.name);
+    //         let cardText = $("<p>").addClass("card-text").text(location.address);
+    //         cardBody.append(cardTitle, cardText);
+    //         card.append(cardBody);
+    //         $("#cards").append(card);
+    //         geocode(location.address, keys.mapbox).then(function(result){
+    //             let marker = new mapboxgl.Marker()
+    //                     .setLngLat(result)
+    //                     .addTo(map);
+    //             let popup = new mapboxgl.Popup()
+    //                     .setLngLat(result)
+    //                     .setHTML("<p>" + location.name + "</p>")
+    //                     .addTo(map);
+    //             marker.setPopup(popup);
+    //         });
+    //     });
+    // });
+    //
+    // $("#cards").on("click", ".card", function(){
+    //     let address = $(this).find(".card-text").text();
+    //     geocode(address, keys.mapbox).then(function(result){
+    //         map.setCenter(result);
+    //         map.setZoom(17);
+    //     });
+    // });
 
 
 

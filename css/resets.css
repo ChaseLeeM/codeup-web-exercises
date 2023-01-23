@@ -64,7 +64,7 @@ body {
 
 #map {
     /* the width and height may be set to any size */
-    width: 99%;
+    width: 100%;
     flex-grow: 1;
 }
 
@@ -79,4 +79,3 @@ main.container, main.container>.row {
 aside.column {
     width: 300px;
     flex: none;
-}
