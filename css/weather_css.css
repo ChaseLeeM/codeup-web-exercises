@@ -1,0 +1,11 @@
+.navbar{
+    background-color: whitesmoke;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navbar-brand{
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+}

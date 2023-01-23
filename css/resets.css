@@ -12,6 +12,8 @@ body {
     line-height: 1.5;
     color: #333;
     background-color: #fff;
+    margin: 1px;
+    padding: 1rem;
 }
 /* THE PAGE WRAPPER MIMICS THE BODY, ONLY WE ARE ABLE TO DO MORE WITH IT IF NECESSARY */
 .page-wrapper {
@@ -58,4 +60,23 @@ body {
 /* OPTIONAL COMBO CLASS TO MAKE A COLUMN SHRINK INSTEAD OF GROW */
 .column.col-shrink {
     flex: 0 1 auto;
+}
+
+#map {
+    /* the width and height may be set to any size */
+    width: 99%;
+    flex-grow: 1;
+}
+
+header.container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.78);
+}
+main.container, main.container>.row {
+    padding: 0;
+    flex-grow: 1;
+    column-gap: 0;
+}
+aside.column {
+    width: 300px;
+    flex: none;
 }
