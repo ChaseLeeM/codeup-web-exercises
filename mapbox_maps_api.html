@@ -25,14 +25,7 @@
       <div id='map' style='width: 100%; height: 400px;'></div>
     </div>
    <div class="col-4">
-      <div id="cardOne" class="card" style="width: 100vh;">
-       <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
+      <div id="card" class="card">
       </div>
     </div>
   </div>
@@ -61,20 +54,6 @@
       center: [-98.4916, 29.4252]
   });
 
-    geocode("1003 Barton Springs Rd, Austin, TX 78704", keys.mapbox).then(function(result) {
-        console.log(result);
-        map.setCenter(result);
-        map.setZoom(17);
-        let marker = new mapboxgl.Marker()
-                .setLngLat(result)
-                .addTo(map);
-        let popup = new mapboxgl.Popup()
-                .setLngLat(result)
-                .setHTML("<p>1003 Barton Springs Rd, Austin, TX 78704</p>")
-                .addTo(map);
-        marker.setPopup(popup);
-    });
-
 
 
   <!-- Map Markers for JSON Objects -->
@@ -82,7 +61,7 @@
   $.getJSON("data/my-maps.json", function(data) {
       console.log(data);
       data.forEach(function(location) {
-          geocode(location.address, keys_one.mapbox).then(function(result) {
+          geocode(location.address, keys.mapbox).then(function(result) {
              console.log(result);
               let marker = new mapboxgl.Marker()
                       .setLngLat(result)
